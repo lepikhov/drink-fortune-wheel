@@ -1,18 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-import WheelComponent from 'react-wheel-of-prizes'
+import WheelComponent from 'react-wheel-of-prizes';
+import useWindowDimensions from './hooks/window_dimensions';
 
 function DrinkWheel() {
+  const { height, width } = useWindowDimensions();
+
   const segments = [
     'водка',
     'ром',
-    'коньячок',
+    'пиво',
     'текила',
-    'джин',
+    'ничего',
     'вискарь',
     'шорли',
-    'пиво',
-    'ничего'
+    'коньячок',
+    'джин'
   ]
   const segColors = [
     '#EE4040',
@@ -37,7 +40,7 @@ function DrinkWheel() {
       contrastColor='white'
       buttonText='Пьём'
       isOnlyOnce={false}
-      size={290}
+      size={width/5}
       upDuration={100}
       downDuration={1000}
       fontFamily='Arial'

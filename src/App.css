@@ -28,6 +28,10 @@ h3 {
   color: white;
 }
 
+.wheel {
+  margin-left: 25%;
+}
+
 .App-link {
   color: #61dafb;
 }
